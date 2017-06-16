@@ -7,9 +7,29 @@
 //
 
 #include <stdio.h>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+int main()
+{
+    int i,j,n;
+    int a[10];
+    for(i=0;i<10;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(j=0;j<=9;j++)
+    {
+        for(i=0;i<10-j;i++)
+        {
+            if(a[i]>a[i+1])
+            {
+                n=a[i];
+                a[i]=a[i+1];
+                a[i+1]=n;
+            }
+        }
+    }
+    for(i=1;i<11;i++)
+    {
+        printf("%d\n",a[i]);
+    }
     return 0;
 }
